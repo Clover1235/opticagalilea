@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Óptica - Lentes con Estilo</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <meta name="theme-color" content="#2091F9">
+
+    <meta name="title" content="Aprende CSS desde cero">
+    <meta name="description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexcgdesign.github.io">
+    <meta property="og:title" content="Aprende CSS desde cero">
+    <meta property="og:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="og:image" content="https://alexcgdesign.github.io/images/css.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jordanalex.com/">
+    <meta property="twitter:title" content="Aprende CSS desde cero">
+    <meta property="twitter:description"
+        content="Hola, soy una descripción que verás cuando busques algo de mi temática en Google.">
+    <meta property="twitter:image" content="https://alexcgdesign.github.io/images/css.jpg">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Optica....</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="index.html" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="catalogo.html" class="nav__links">Catalogo</a>
+                </li>
+                <li class="nav__items">
+                    <a href="cotizacion.html" class="nav__links">Cotizar</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title" style="color: #ffffff;">Tu mirada, con estilo perfecto.</h1>
+            <p class="hero__paragraph" style="color: #ffffff;">Tu vista merece lo mejor. Ven y descubre la diferencia de ver con calidad y estilo.</p>
+            <a href="#" class="cta">Comienza ahora</a>
+        </section>
+    </header>
+
+    <main>
+
+   <!-- Promociones destacadas -->
+  <h2 class="subtitle typewriter" style="margin-bottom: 1rem; text-align: center; font-family: 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 2.2rem; color: #333; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+    <img src="./images/promociones.jpg" alt="icono" style="width: 24px; height: 24px;"> PROMOCION DEL MES
+  </h2>
+
+  <div class="catalog__offers fade-in" style="display: flex; justify-content: center; align-items: stretch; gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem; background: linear-gradient(135deg, #fefefe, #e3f2fd); padding: 2rem; border-radius: 1rem;">
+    <article class="catalog__item highlight-offer" style="flex: 1 1 300px; max-width: 400px; padding: 1rem; border: 2px solid #2091F9; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background: #ffffff; text-align: center;" data-category="aros" data-price="low">
+      <span class="catalog__badge">Oferta</span>
+      <img src="./images/aro%20moderno.jpg" alt="Aro Oferta" class="catalog__img">
+      <h3 class="catalog__title" style="font-weight: 300; font-size: 1.2rem; color: #444;">Aro Moderno</h3>
+      <p class="catalog__price">Q280 <span class="catalog__old-price">Q320</span></p>
+      <button class="cta preview-btn" data-title="Aro Moderno" data-price="Q280" data-img="./images/aro%20moderno.jpg">Vista previa</button>
+    </article>
+
+    <article class="catalog__item highlight-offer" style="flex: 1 1 300px; max-width: 400px; padding: 1rem; border: 2px solid #2091F9; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background: #ffffff; text-align: center;" data-category="aros" data-price="low">
+      <span class="catalog__badge">2x1</span>
+      <img src="./images/lente 3.jpg" alt="Combo Aros" class="catalog__img">
+      <h3 class="catalog__title" style="font-weight: 300; font-size: 1.2rem; color: #444;">Combo Aros</h3>
+      <p class="catalog__price">Q300</p>
+      <button class="cta preview-btn" data-title="Combo Aros" data-price="Q300" data-img="./images/aro2x1.jpg">Vista previa</button>
+    </article>
+  </div>
+
+        <!-- Sección Catálogo -->
+        <section id="catalogo" class="catalog container">
+            <h2 class="subtitle">Catálogo de Productos</h2>
+
+        <!-- Filtros -->
+        <div class="catalog__filters">
+            <select id="filter-category" class="catalog__select">
+                <option value="all">Todos</option>
+                <option value="aros">Aros</option>
+                <option value="lentes">Lentes</option>
+                <option value="accesorios">Accesorios</option>
+         </select>
+
+            <select id="filter-price" class="catalog__select">
+                <option value="all">Todos los precios</option>
+                <option value="low">Menor a Q300</option>
+                <option value="mid">Q300 - Q500</option>
+                <option value="high">Mayor a Q500</option>
+            </select>
+
+            <select id="sort-price" class="catalog__select">
+                <option value="default">Ordenar por</option>
+                <option value="asc">Precio: Menor a mayor</option>
+                <option value="desc">Precio: Mayor a menor</option>
+            </select>
+        </div>
+
+        
+        <!-- Productos -->
+            <div class="catalog__grid">
+                <article class="catalog__item" data-category="aros" data-price="mid">
+                    <img src="./images/lente 1.webp" alt="Aro Clásico" class="catalog__img">
+                    <h3 class="catalog__title">Aro Clásico</h3>
+                    <p class="catalog__price">Q450</p>
+                    <button class="cta preview-btn" data-title="Aro Clásico" data-price="Q450" data-img="./images/producto1.jpg">Vista previa</button>
+            </article>
+
+                <article class="catalog__item" data-category="lentes" data-price="high">
+                    <img src="./images/lente 2.jpg" alt="Lentes Antireflejo" class="catalog__img">
+                    <h3 class="catalog__title">Lentes Antireflejo</h3>
+                    <p class="catalog__price">Q600</p>
+                    <button class="cta preview-btn" data-title="Lentes Antireflejo" data-price="Q600" data-img="./images/producto2.jpg">Vista previa</button>
+                </article>
+
+                <article class="catalog__item" data-category="accesorios" data-price="low">
+                    <img src="./images/lente 3.jpg" alt="Estuche Elegante" class="catalog__img">
+                    <h3 class="catalog__title">Estuche Elegante</h3>
+                    <p class="catalog__price">Q150</p>
+                    <button class="cta preview-btn" data-title="Estuche Elegante" data-price="Q150" data-img="./images/producto3.jpg">Vista previa</button>
+                </article>
+
+             </div>
+        </section>
+
+        <!-- Modal de vista previa -->
+            <div id="preview-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <img id="modal-img" src="" alt="Vista previa" class="modal-img">
+                <h3 id="modal-title"></h3>
+                <p id="modal-price"></p>
+                <a id="modal-buy" href="" class="cta" target="_blank">Comprar</a>
+        </div>
+    </div>
+
+            </div>
+        </section>
+
+        <div id="preview-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <img id="modal-img" src="" alt="Vista previa" class="modal-img">
+                <h3 id="modal-title"></h3>
+            <p id="modal-price"></p>
+            <a href="https://wa.link/pge8la" class="cta">Comprar</a>
+            </div>
+        </div>
+
+      <section id="blog" class="testimonials container">
+  <h2 class="subtitle" style="text-align: center; font-weight: 300;">Lo que dicen nuestros clientes</h2>
+
+  <div class="testimonial-grid">
+    <article class="testimonial-card fade-up">
+      <img src="./images/face.jpg" alt="Jordan Alexander" class="testimonial-img">
+      <h3>Jordan Alexander</h3>
+      <p class="testimonial-role">Cliente satisfecho</p>
+      <p class="testimonial-text">¡Excelente atención! Me ayudaron a elegir el mejor aro para mi rostro. 100% recomendado.</p>
+    </article>
+
+    <article class="testimonial-card fade-up">
+      <img src="./images/face2.jpg" alt="Alejandra Perez" class="testimonial-img">
+      <h3>Alejandra Perez</h3>
+      <p class="testimonial-role">Paciente frecuente</p>
+      <p class="testimonial-text">Calidad y estilo en un solo lugar. Los lentes antireflejo que compré son lo mejor.</p>
+    </article>
+
+    <article class="testimonial-card fade-up">
+      <img src="./images/face3.jpg" alt="Karen Arteaga" class="testimonial-img">
+      <h3>Karen Arteaga</h3>
+      <p class="testimonial-role">Compradora feliz</p>
+      <p class="testimonial-text">Excelente asesoría, productos modernos y muy buenos precios. ¡Volveré pronto!</p>
+    </article>
+  </div>
+</section>
+
+
+        <section class="questions container">
+            <h2 class="subtitle">Preguntas frecuentes</h2>
+            <p class="questions__paragraph">Respuestas para nuestras preguntas mas frecuentes a nuestra comunidad.
+            </p>
+
+            <section class="questions__container">
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿De donde somos?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">Somos una de las mejores opticas de Quetzaltenango, te ofrecemos calidad y precios.
+                        Cuidamos tus ojos porque mas que clientela son nuestra familia.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Donde estamos ubicados?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">Estamos ubicados en zona 3 de Quetzaltenango en la 17 avenida y 4ta calle, estamos a un costado de Mac´Donald
+                        nos localizaras mas rapido que nunca.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Por donde nos puedes contactar?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">Nos puedes contactar ya sea mediante Whatssap, Facebook Messenger</p>
+                    </div>
+                </article>
+            </section>
+
+            <section id="contacto" class="questions__offer">
+                <h2 class="subtitle">¿Estas listo para dar el siguiente paso?</h2>
+                <p class="questions__copy">Comunicate con nuestros mejores asesores para que hagas un cambio
+                y mejora a tu vista, llega el estilo y combina en tu dìa a dìa, en Optica... te invitamos a
+                formar parte de nuestra familia
+                </p>
+                <a href="#" class="cta">Contactanos</a>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__container container">
+             <nav class="nav nav--footer">
+                <h2 class="footer__title">Optica...</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#catalogo" class="nav__links">Catalogo</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#contacto" class="nav__links">Contacto</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#blog" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form class="footer__form" onsubmit="enviarConsulta(event)">
+  <h2 class="footer__newsletter">Cotiza tus lentes</h2>
+  <div class="footer__inputs">
+    <input type="text" placeholder="Tu nombre" id="nombre" class="footer__input" required>
+    <input type="text" placeholder="Producto o tipo de lentes" id="mensaje" class="footer__input" required>
+    <input type="submit" value="Enviar a WhatsApp" class="footer__submit">
+  </div>
+</form>
+
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Derechos reservados &copy; Optica..</h3>
+        </section>
+    </footer>
+
+    <script src="./js/slider.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+            const el = entry.target;
+
+            if (entry.isIntersecting) {
+             el.classList.add("show");
+             el.classList.remove("hidden");
+
+        // Reiniciar animación typewriter cada vez
+            if (el.classList.contains("typewriter")) {
+            el.style.animation = "none";
+            el.offsetHeight; // Forzar reflow
+            el.style.animation = null;
+         }
+
+        } else { 
+            el.classList.remove("show");
+            el.classList.add("hidden");
+             }
+         });
+        }, {
+     threshold: 0.3
+         });
+
+        document.querySelectorAll('.typewriter, .fade-in').forEach(el => {
+        observer.observe(el);
+         });
+    </script>
+
+    <script>
+document.getElementById("filter-category").addEventListener("change", filterCatalog);
+document.getElementById("filter-price").addEventListener("change", filterCatalog);
+document.getElementById("sort-price").addEventListener("change", sortCatalog);
+
+function filterCatalog() {
+  const category = document.getElementById("filter-category").value;
+  const price = document.getElementById("filter-price").value;
+
+  document.querySelectorAll(".catalog__item").forEach(item => {
+    const itemCategory = item.dataset.category;
+    const itemPrice = item.dataset.price;
+    const matchCategory = category === "all" || category === itemCategory;
+    const matchPrice = price === "all" || price === itemPrice;
+    item.style.display = (matchCategory && matchPrice) ? "block" : "none";
+  });
+}
+
+function enviarConsulta(event) {
+  event.preventDefault();
+  const nombre = document.getElementById("nombre").value;
+  const mensaje = document.getElementById("mensaje").value;
+  const texto = `Hola, soy ${nombre} y me gustaría cotizar: ${mensaje}`;
+  const url = `https://wa.me/50200000000?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
+}
+
+
+function sortCatalog() {
+  const sortValue = document.getElementById("sort-price").value;
+  const grid = document.querySelector(".catalog__grid");
+  const items = Array.from(grid.querySelectorAll(".catalog__item"));
+
+  if (sortValue === "default") return;
+
+  items.sort((a, b) => {
+    const priceA = parseFloat(a.querySelector(".catalog__price").textContent.replace("Q", ""));
+    const priceB = parseFloat(b.querySelector(".catalog__price").textContent.replace("Q", ""));
+    return sortValue === "asc" ? priceA - priceB : priceB - priceA;
+  });
+
+  items.forEach(item => grid.appendChild(item));
+}
+
+const modal = document.getElementById("preview-modal");
+const modalImg = document.getElementById("modal-img");
+const modalTitle = document.getElementById("modal-title");
+const modalPrice = document.getElementById("modal-price");
+const modalBuy = document.getElementById("modal-buy");
+const closeModal = document.querySelector(".close-modal");
+
+closeModal.onclick = () => modal.style.display = "none";
+window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+
+document.querySelectorAll(".preview-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const title = button.dataset.title;
+    const price = button.dataset.price;
+    const img = button.dataset.img;
+
+    modalTitle.textContent = title;
+    modalPrice.textContent = price;
+    modalImg.src = img;
+    modalBuy.href = `https://wa.me/50200000000?text=Hola, quiero más información sobre: ${encodeURIComponent(title)}`;
+    modal.style.display = "block";
+  });
+});
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // opcional: para que no se repita
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  });
+</script>
+
+    </body>
+
+</html>
